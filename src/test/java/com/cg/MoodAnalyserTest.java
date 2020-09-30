@@ -8,11 +8,10 @@ import org.junit.*;
 import com.cg.MoodAnalyser;
 
 public class MoodAnalyserTest {
-	//TC1.1
 	@Test
 	public void TestMood() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
 		String mood = moodAnalyser.analyseMood();
-		Assert.assertEquals("NULL", mood);
+		Assert.assertEquals("HAPPY", mood);
 	}
 }
