@@ -3,15 +3,23 @@
  */
 package com.cg;
 
-import org.junit.Test;
+import org.junit.*;
 
 import com.cg.MoodAnalyser;
 
-import static org.junit.Assert.*;
-
 public class MoodAnalyserTest {
-    @Test public void testSomeLibraryMethod() {
-        MoodAnalyser classUnderTest = new MoodAnalyser();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
-    }
+	//TC1.1
+	@Test
+	public void givenMessage_whenSad_ShouldReturnSad() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		String mood = moodAnalyser.analyseMood("I am in Sad mood");
+		Assert.assertEquals("SAD", mood);
+	}
+	//TC1.2
+	@Test
+	public void givenMessage_whenNotSad_ShouldReturnHappy() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		String mood = moodAnalyser.analyseMood("I am in Any Mood");
+		Assert.assertEquals("HAPPY", mood);
+	}
 }

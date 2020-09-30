@@ -4,7 +4,10 @@
 package com.cg;
 
 public class MoodAnalyser {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+	public String analyseMood(String message) {
+		if (message.contains("Sad"))
+			return "SAD";
+		else
+			return "HAPPY";
+	}
 }
