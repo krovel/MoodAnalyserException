@@ -24,12 +24,12 @@ public class MoodAnalyser {
 		if(message.length() == 0)
 			throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY, "Please Enter Some Message");
 		
-			if (message.contains("Happy"))
-				return "SAD";
-			else
-				return "HAPPY";
-		}catch(NullPointerException e) {
-			throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL, "Can't be NULL");
-		}
+		if (message.contains("sad"))
+			return "SAD";
+		else
+			return "HAPPY";
+	}catch(NullPointerException e) {
+		throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL, "Can't be NULL");
 	}
+}
 }
