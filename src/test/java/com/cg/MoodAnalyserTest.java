@@ -10,9 +10,9 @@ import com.cg.MoodAnalyser;
 public class MoodAnalyserTest {
 	//TC1.1
 	@Test
-	public void givenMessage_whenHappy_ShouldReturnSad() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
+	public void TestMood() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
 		String mood = moodAnalyser.analyseMood();
-		Assert.assertEquals("SAD", mood);
+		Assert.assertEquals("NULL", mood);
 	}
 }
